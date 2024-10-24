@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        WEB05
+    </title>
+    <img src = "/images/logo.jpeg">
+    <meta charset="utf-8">
+    <link rel="icon" href="data:,"> <!-- favicon 처리 -->
+</head>
+
+
+<body>
+    <%- login %>
+    <h1><a href="/"><%- title%></a></h1>
+    <h3> 201935266 : 박영준 </h3>
+    <a href="/author">author</a>
+    <ol type="1">
+        <% var i=0; while(i < list.length) { %>
+            <li><a href="/page/<%= list[i].id %>">
+                    <%= list[i].title %>
+                </a></li>
+            <% i +=1; } %>
+
+    </ol>
+
+    <%- menu%>
+    <%- body%>
+
+</body>
+
+</html>
